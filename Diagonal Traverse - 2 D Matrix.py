@@ -26,7 +26,7 @@ def findDiagonalOrder(mat):
     nums_cols = len(mat[0])
 
     # creating diagonal lists for each diagonal, i.e. how many diagonals lists
-    diagonals =[[] for _ in range(nums_rows + nums_cols - 1)]
+    diagonals = [[] for _ in range(nums_rows + nums_cols - 1)]
 
     for i in range(nums_rows):
         for j in range(nums_cols):

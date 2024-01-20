@@ -1,0 +1,12 @@
+for <iterator or iteration var> in <collection>:
+    <do something>
+
+1. Pass statement:- compiles code w/o showing any error. "Do nothing". It's just a placeholder.
+2. Continue statement:- skips the specified condition & continues to next command i.e. goes back to top condition...
+3. Break statement:- w/o checking next condition or block of code directly jumps out of the code
+
+x += 1 -> += plus equals -> shorthand operator
+
+Natural numbers:- 1, 2, 3.....
+0 & negative numbers are not natural numbers.
+

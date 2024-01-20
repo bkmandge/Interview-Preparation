@@ -1,0 +1,43 @@
+Array
+
+Array DS:- Built-in DS. Stores similar types of data in sequential memory location
+Array memory allocation:- sequential memory allotted by compiler & elements stored row by row in RAM
+
+Array implementation:-
+    1. using array module:- standard library comes with python
+    2. using numpy module:- third party module, need to install using pip
+
+Array operations:-
+	1. creating empty array
+	2. creating array with elements
+	3. inserting an element
+	4. traversing an array
+	5. accessing an element with index
+	6. searching an element
+	7. deleting an element
+
+More operations:-
+	8. append element at the end
+	9. extend array by adding another array
+	10. add list using fromlist()
+	11. remove last element using pop()
+	12. finding element using index()
+	13. reversing an array using reverse()
+	14. array buffer memory start info & no. of elements in an array using buffer_info()
+	15. counting occurance of specific element using count()
+	16. converting integers to strings & vice-versa using tobytes() & frombytes()
+
+#tobytes()
+from array import *
+
+arr1 = array('i', [1, 2, 3, 4, 1, 1])
+bt = arr1.tobytes()
+print(bt)
+
+#frombytes()
+ints = array('i')
+ints.frombytes(bt)
+print(ints)
+
+    17. converting array into list using tolist() - print(arr1.tolist())
+    18. slicing elements using [:]

@@ -4,7 +4,7 @@ def countFrequency(arr):
     visited = [False] * n
     
     for i in range(n):
-        if visited[i] == True:
+        if visited[i] is True:
             continue
         count = 1
         
@@ -17,7 +17,7 @@ def countFrequency(arr):
         
 
 # Hashmap:- TC O(N), O(N)
-def countFrequency2(arr):
+def countFrequency2(arr, char):
     n = len(arr)
     hashMap = {}  
         
@@ -25,13 +25,13 @@ def countFrequency2(arr):
         if arr[i] in hashMap:
             hashMap[arr[i]] += 1  # increase count
         else:
-            hashMap[arr[i]] = 1 # add element with count 1
+            hashMap[arr[i]] = 1  # add element with count 1
+
+    for char in hashMap:
+        print(char, hashMap[char])  # print key - value / count pairs
     
-    for i in hashMap:
-        print(i, hashMap[i])  # print key - value / count pairs
     
-    
-arr = [10,5,10,15,10,5]
+arr = [10, 5, 10, 15, 10, 5]
 print(arr)
-countFrequency2(arr)
+print(countFrequency2(arr, 10))
         

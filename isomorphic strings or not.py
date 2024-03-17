@@ -1,16 +1,23 @@
-def areIsomorphic(str1, str2):
-    if len(str1) != len(str2):
+"""
+Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+
+"""
+
+def areIsomorphic(s, t):
+    if len(s) != len(t):
         return False
 
-    char_map = {}
-    for i in range(len(str1)):
-        if str1[i] in char_map:
-            if char_map[str1[i]] != str2[i]:
+    hashMap = {}
+    for i in range(len(s)):
+        if s[i] in hashMap:
+            if hashMap[s[i]] != t[i]:
                 return False
         else:
-            if str2[i] in char_map.values():
+            # If current character in t is already mapped to another character in s, return False
+            if t[i] in hashMap.values():
                 return False
-            char_map[str1[i]] = str2[i]
+            # Add mapping from current character in s to current character in t
+            hashMap[s[i]] = t[i]
     return True
 
 
@@ -21,3 +28,8 @@ if areIsomorphic(str1, str2):
     print("True")
 else:
     print("False")
+
+
+s = "egg"; t = "add"       # True
+s = "foo"; t = "bar"        # False
+s = "paper"; t = "title"    # True

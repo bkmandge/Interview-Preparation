@@ -5,25 +5,23 @@ def is_valid_ip(s):
 	if n < 7:
 		return False
 
-	# Using split to separate all the strings from '.'
-	# and create a list like for example -
-	# "222.111.111.111" becomes ["222", "111", "111", "111"]
-	substrings = s.split(".")
+	# remove all dots and create a list ->["222", "111", "111", "111"]
+	sList = s.split(".")
 	count = 0
 
-	for substr in substrings:
+ 	# count all values
+	for s in sList:
 		count += 1
 
 		# If the substring size is greater than 1 and the first character is '0', return false
-		if len(substr) > 1 and substr[0] == '0':
+		if len(s) > 1 and s[0] == '0':
 			return False
 
-		# For substrings like a.b.c.d, checking if any character is non-numeric
-		if not substr.isdigit():
+		# For substrings like a.b.c.d return False
+		if not s.isdigit():
 			return False
 
-		# Check if the number is greater than 255
-		if int(substr) > 255:
+		if int(s) > 255:
 			return False
 
 	# If the count of substrings is not 4, return false

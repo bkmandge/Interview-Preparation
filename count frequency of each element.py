@@ -17,7 +17,7 @@ def countFrequency(arr):
         
 
 # Hashmap:- TC O(N), O(N)
-def countFrequency2(arr, char):
+def countFrequency3(arr, char):
     n = len(arr)
     hashMap = {}  
         

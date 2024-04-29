@@ -9,5 +9,5 @@ def first_unique_char(s):
             return i
     return -1
 
-# Test
+
 print(first_unique_char("leetcode"))  # Output: 0

@@ -1,25 +1,29 @@
 """                 Remove Spaces from a String
 
-s = "Take you forward"  -> Takeyouforward
 
-T.C. O(N)
-S.C. O(1)
 """
-
+# count spaces and replace those with empty string ""
 def removeSpaces(s):
+    count = 0
+    
+    for ch in s:
+        if ch == " ":
+            count += 1
+    
+    for i in range(count):
+        s = s.replace(" ", "")
+    return s
+
+
+# using extra space
+def removeSpaces2(s):
     res = []
 
-    for char in s:
-        if char != " ":
-            res.append(char)
-    res.append('\0')    # append \0 as null char at the end of string
+    for ch in s:
+        if ch != " ":
+            res.append(ch)
     return ''.join(res)
 
 
-s = "Take you forward"
-print(removeSpaces(s))
-
-s = "Take you forward"
-print(removeSpaces(s))
-
-
+s = "keep coding continue"
+print(removeSpaces2(s))

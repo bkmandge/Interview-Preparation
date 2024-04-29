@@ -1,18 +1,18 @@
 def reverseWords(s):
-    ans = ""
+    n = len(s)
+    res = ""
     
-    wordList = s.split()
-    
-    for i in wordList:
-        ans = i[::-1]
-        print(ans, end=" ")
+    for i in range(n - 1, -1, -1):
+        res += s[i]
+    return res
 
 
-# s = "Geeks for Geeks"
-# reverseWords(s)
+# using slicing
+def reverseWords2(s):
+    return s[::-1]
+        
 
 # using stack
-
 def reverseWords2(s):
     n = len(s)
     stack = []
@@ -40,8 +40,8 @@ def reverseWords2(s):
     return rev
 
 
-s = "Geeks for Geeks"
-print(reverseWords2(s))
+# s = "Hello world"
+# print(reverseWords(s))
 
 
     
